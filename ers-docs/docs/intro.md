@@ -21,7 +21,7 @@ Entrance Room System（ERS）は、VRChatワールドで使用できるエント
 ERSは以下の環境で動作確認を行っています：
 
 - **Unity**: 2022.3.22f1
-- **VRChat World SDK**: 3.8.2
+- **VRChat World SDK**: 3.9.0
 
 ## このドキュメントについて
 
