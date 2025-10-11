@@ -1,113 +1,53 @@
 import React from 'react';
-import clsx from 'clsx';
-import styles from './styles.module.css';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import styles from './styles.module.css';
 
-type FeatureItem = {
+type FlowStep = {
   title: string;
-  icon: (baseUrl: string) => JSX.Element;
-  description: JSX.Element;
-  backgroundImage?: (baseUrl: string) => string;
+  description: string;
 };
 
-const FeatureList: FeatureItem[] = [
+const flowSteps: FlowStep[] = [
   {
-    title: 'グループ音声制御',
-    backgroundImage: (baseUrl) => `${baseUrl}img/mixer_sample.png`,
-    icon: (baseUrl) => (
-      <img src={`${baseUrl}img/group-communication.svg`} alt="グループ音声制御" className={styles.featureIcon} />
-    ),
-    description: (
-      <>
-        エリアごとに音声を分離。
-        <br />
-        音声を動的に調整します。
-      </>
-    ),
+    title: 'ワールド入室と個別転送',
+    description:
+      '利用者がワールドに入室すると、まずは参加者単位で個別の待機部屋に転送され、落ち着いて準備ができます。',
   },
   {
-    title: 'マイクギミック',
-    backgroundImage: (baseUrl) => `${baseUrl}img/amplification_sample.png`,
-    icon: (baseUrl) => (
-      <img src={`${baseUrl}img/amplification.svg`} alt="マイクギミック" className={styles.featureIcon} />
-    ),
-    description: (
-      <>
-        マイクのモードは3種類。
-        <br />
-        イベント司会や案内に最適。
-      </>
-    ),
+    title: '注意事項の確認',
+    description:
+      '待機部屋ではガイドに沿って注意事項を確認し、重要なポイントを理解したうえで次のステップへ進めます。',
   },
   {
-    title: 'トランシーバーギミック',
-    backgroundImage: (baseUrl) => `${baseUrl}img/transceiver_sample.png`,
-    icon: (baseUrl) => (
-      <img src={`${baseUrl}img/transceiver.svg`} alt="トランシーバーギミック" className={styles.featureIcon} />
-    ),
-    description: (
-      <>
-        ワールド内通話可能。
-        <br />
-        スタッフ間の連絡に最適。
-      </>
-    ),
-  },
-  {
-    title: 'セーブ・ロード機能',
-    backgroundImage: (baseUrl) => `${baseUrl}img/preset_sample.png`,
-    icon: (baseUrl) => (
-      <img src={`${baseUrl}img/save.svg`} alt="セーブ・ロード機能" className={styles.featureIcon} />
-    ),
-    description: (
-      <>
-        設定をセーブ・ロードする機能。
-        <br />
-        文字列での入出力も可能。
-      </>
-    ),
+    title: '同意後にメインエリアへ移動',
+    description:
+      '全ての内容に同意してボタンを押すと、メインエリアへ自動的に転送され、本編の体験を開始できます。',
   },
 ];
 
-function Feature({title, icon, description, backgroundImage, baseUrl}: FeatureItem & {baseUrl: string}) {
-  return (
-    <div className={clsx('col col--3')}>
-      <div className={styles.featureCard}>
-        <div className={styles.featureContent}>
-          <div className="text--center">
-            {icon(baseUrl)}
-          </div>
-          <div className="text--center padding-horiz--md">
-            <h3>{title}</h3>
-            <p>{description}</p>
-          </div>
-          {backgroundImage && (
-            <div className={styles.featureImageWrapper}>
-              <img
-                src={backgroundImage(baseUrl)}
-                alt={title}
-                className={styles.featureImage}
-              />
-            </div>
-          )}
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export default function Features(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
+  const introMessage = `${siteConfig.title}は、入室した瞬間からメインエリアに至るまでの導線をシンプルに整理し、安全でスムーズな運営を実現します。`;
+
   return (
     <section className={styles.features}>
       <div className="container">
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>主要機能</h2>
+          <p className={styles.sectionSubtitle}>{introMessage}</p>
         </div>
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} baseUrl={siteConfig.baseUrl} />
-          ))}
+        <div className={styles.flowCard}>
+          <ol className={styles.flowList}>
+            {flowSteps.map((step, index) => (
+              <li key={step.title} className={styles.flowItem}>
+                <span className={styles.stepNumber}>{index + 1}</span>
+                <div className={styles.flowText}>
+                  <h3 className={styles.stepTitle}>{step.title}</h3>
+                  <p className={styles.stepDescription}>{step.description}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
         </div>
       </div>
     </section>
