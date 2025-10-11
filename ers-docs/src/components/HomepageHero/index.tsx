@@ -14,7 +14,7 @@ export default function HomepageHero(): JSX.Element {
           <div className={styles.heroTitleWrapper}>
             <span className={styles.heroTitleSub}>VRChat Udon Sharp Gimmick</span>
             <div className={styles.heroTitleMainWrapper}>
-              <img src={`${siteConfig.baseUrl}img/vgc2-logo.png`} alt="ERS Logo" className={styles.heroLogo} />
+              <img src={`${siteConfig.baseUrl}img/ers-logo.png`} alt="ERS Logo" className={styles.heroLogo} />
               <span className={styles.heroTitleMain}>Entrance Room System</span>
             </div>
           </div>

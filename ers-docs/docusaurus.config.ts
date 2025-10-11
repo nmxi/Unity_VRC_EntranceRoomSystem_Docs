@@ -69,7 +69,7 @@ const config: Config = {
       title: 'ERS',
       logo: {
         alt: 'ERS Logo',
-        src: 'img/vgc2-logo.png',
+        src: 'img/ers-logo.png',
       },
       items: [
         {
