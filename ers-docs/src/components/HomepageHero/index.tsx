@@ -20,7 +20,7 @@ export default function HomepageHero(): JSX.Element {
           </div>
         </h1>
         <p className={styles.heroDescription}>
-          VRChatワールドのエントランスルームを簡単に構築できるシステム。
+          ワールド入室後、個別の注意書き部屋へ転送し、同意後メインエリアに転送する仕組みを簡単構築します。
         </p>
         <div className={styles.buttons}>
           <Link
