@@ -39,14 +39,24 @@
   margin: 0;
   padding-left: 0;
   list-style: none;
-  display: grid;
+  display: flex;
   gap: 1.75rem;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: stretch;
 }
 
 .flowItem {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   gap: 1.25rem;
+  flex: 1 1 0;
+  padding: 1.75rem;
+  border-radius: 16px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  background-color: var(--ifm-card-background-color, var(--ifm-background-surface-color));
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
 }
 
 .stepNumber {
@@ -65,6 +75,7 @@
 
 .flowText {
   flex: 1;
+  text-align: center;
 }
 
 .stepTitle {
@@ -91,6 +102,11 @@
 
   .sectionSubtitle {
     font-size: 1.05rem;
+  }
+
+  .flowList {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .flowCard {
@@ -121,8 +137,13 @@
     padding: 1.75rem 1.25rem;
   }
 
+  .flowList {
+    flex-direction: column;
+  }
+
   .flowItem {
     flex-direction: column;
+    flex: 1 1 auto;
   }
 
   .stepNumber {

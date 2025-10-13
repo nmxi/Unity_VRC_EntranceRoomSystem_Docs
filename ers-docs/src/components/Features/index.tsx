@@ -1,5 +1,4 @@
 import React from 'react';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './styles.module.css';
 
 type FlowStep = {
@@ -26,15 +25,11 @@ const flowSteps: FlowStep[] = [
 ];
 
 export default function Features(): JSX.Element {
-  const {siteConfig} = useDocusaurusContext();
-  const introMessage = `${siteConfig.title}は、入室した瞬間からメインエリアに至るまでの導線をシンプルに整理し、安全でスムーズな運営を実現します。`;
-
   return (
     <section className={styles.features}>
       <div className="container">
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>主要機能</h2>
-          <p className={styles.sectionSubtitle}>{introMessage}</p>
         </div>
         <div className={styles.flowCard}>
           <ol className={styles.flowList}>
