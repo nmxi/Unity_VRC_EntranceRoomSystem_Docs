@@ -33,7 +33,6 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         'control-panel',
-        'additional-settings-panel',
       ],
     },
   ],
