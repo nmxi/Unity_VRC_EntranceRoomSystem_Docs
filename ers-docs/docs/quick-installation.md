@@ -2,66 +2,57 @@
 sidebar_position: 3
 ---
 
-import ClickableImage from '@site/src/components/ClickableImage';
-
 # クイックインストール
 
-VGC2を最速で導入するための手順です。このガイドでは、基本的な音声グループ分け機能のみをセットアップします。
+Entrance Room System（ERS）を短時間で導入するためのガイドです。ワールド入室後にプレイヤーを待機ルームへ案内し、注意事項への同意後にメインエリアへ移動させる基本フローを構築します。
 
 ## 導入手順
 
 ### 1. パッケージのインポート
 
-1. [Booth](https://nmxi.booth.pm/)からVGC2パッケージをダウンロード
-2. UnityプロジェクトでAssets > Import Package > Custom Packageを選択
-3. ダウンロードしたunitypackageを選択してインポート
+1. [Booth](https://nmxi.booth.pm/)にある ERS の販売ページへアクセスします。
+2. 購入またはダウンロード後、取得した `EntranceRoomSystem` の unitypackage を用意します。
+3. Unity を起動し、メニューから **Assets > Import Package > Custom Package** を選択します。
+4. 先ほどの unitypackage を指定し、全ての項目にチェックが入っていることを確認して **Import** を実行します。
 
-<ClickableImage src="/img/getting-started--package-import.png" alt="パッケージのインポート" />
+### 2. ERS Prefab の配置
 
-### 2. VGC2 Prefabの配置
-
-`Assets/mikinel/VoiceGroupControl2/VoiceGroupControl2.prefab`をシーンに配置します。
-
-<ClickableImage src="/img/add-prefab--scene-placement.png" alt="VGC2 Prefabの配置" />
+`Assets/mikinel/EntranceRoomSystem/Prefabs` フォルダに含まれる `EntranceRoomSystem.prefab`（リリースにより名称が前後する場合があります）を、Scene ビューへドラッグ＆ドロップして追加します。
 
 :::caution 注意
-VoiceGroupControl2.prefabはシーンに1つだけ配置してください。
+シーン内に複数の ERS Prefab が存在すると転送処理が競合します。1シーンにつき 1 つだけ配置してください。
 :::
 
-### 3. VGCGroupAreaの追加
+### 3. 待機ルームとメインエリアの調整
 
-VGCManagerコンポーネントの「VGCGroupAreaを追加」ボタンをクリックして、GroupAreaを必要な数だけ追加します。
+Prefab にはサンプル構成が含まれており、以下のような要素が同梱されています。
 
-<ClickableImage src="/img/add-vgcgrouparea--add-button.png" alt="VGCGroupAreaの追加" />
+- 待機ルーム（Entrance Waiting Area）
+- 注意事項ボードと同意ボタン
+- 同意後に移動するメインエリア（Main Area Destination）
 
-### 4. GroupAreaの設定
+シーンの構造に合わせて各子オブジェクトを移動・回転し、ワールドレイアウトに沿った導線を作成します。必要に応じて、ルーム内の装飾や案内板のテキストを変更してください。
 
-各GroupAreaに対して以下を設定します：
+### 4. ERS コンポーネントの設定
 
-1. **位置とサイズ**: シーンビューでギズモを使って調整
-2. **Group ID**: IDの設定
-3. **Group Name（任意）**: RoomA、RoomBなど分かりやすい名前
+Prefab のルートオブジェクトを選択すると、インスペクターに ERS の管理コンポーネントが表示されます。主に以下の項目を確認・調整します。
 
-<ClickableImage src="/img/add-vgcgrouparea--groupid-setting.png" alt="GroupAreaの設定" />
+- 入室時にプレイヤーがスポーンする待機ルームの座標
+- 注意事項の同意に使用するトリガーやボタンの参照
+- メインエリアへ転送する際のワープ先
 
-GroupAreaの配置が完了すると、以下のような状態になります：
+サンプル状態では既に参照が設定されていますが、自身のワールドに合わせて必要なオブジェクトに差し替えてください。
 
-<ClickableImage src="/img/add-vgcgrouparea--hero-image.png" alt="GroupAreaの配置完了" />
+### 5. コントロールパネルの設置（任意）
 
-### 5. Configuratorで音量設定
+運営がワールド内で ERS の設定を切り替えられるようにする場合は、`Assets/mikinel/EntranceRoomSystem/Prefabs/ERSControlPanel.prefab` を追加で配置します。詳しい操作方法は「[コントロールパネルの追加](/docs/control-panel)」を参照してください。
 
-シーンに配置したVoiceGroupControl2のオブジェクトを選択し、インスペクター上に表示される「VGC2 Configuratorを開く」ボタンをクリックしてください。
+### 6. 動作確認
 
-<ClickableImage src="/img/group-volume-settings--open-configurator.png" alt="Configuratorを開く" />
+Unity の Play モードで以下を確認します。
 
-Configuratorが開いたら、グループ間の音量を設定します。
+1. ワールド入室時にプレイヤーが待機ルームへ移動すること。
+2. 注意事項の同意フローが正常に進行すること。
+3. 同意後にメインエリアへ正しく転送されること。
 
-<ClickableImage src="/img/group-volume-settings--configurator.png" alt="VGC2 Configurator" />
-
-設定が完了したら、必ず「設定を適用」ボタンをクリックしてください。
-
-:::caution 重要
-設定を適用しないとワールドのアップロードが失敗します。
-:::
-
-### 6. ワールドのアップロード
+問題がなければ、ER​S の基本セットアップは完了です。
