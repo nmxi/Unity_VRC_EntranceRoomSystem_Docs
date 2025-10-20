@@ -19,9 +19,6 @@ export default function HomepageHero(): JSX.Element {
             </div>
           </div>
         </h1>
-        <p className={styles.heroDescription}>
-          ワールド入室後、個別の注意書き部屋へ転送し、同意後メインエリアに転送する仕組みを簡単構築します。
-        </p>
         <div className={styles.buttons}>
           <Link
             className={clsx('button button--primary button--lg', styles.heroButton)}
