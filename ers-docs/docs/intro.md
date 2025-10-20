@@ -3,20 +3,21 @@ sidebar_position: 1
 sidebar_label: Entrance Room Systemについて
 ---
 
+import ClickableImage from '@site/src/components/ClickableImage';
+
 # Entrance Room Systemについて
 
 Entrance Room System（ERS）は、VRChatワールドで使用できるエントランスルームシステムです。
 
-![ERS Preview](/img/ers-preview.png)
+<ClickableImage src="/img/ers-preview.png" alt="ERS Preview" />
 
 ## 主要機能
 
-ERSはワールドの導線づくりを支援する以下の機能を備えています。
+ERSはワールド入室後、個別の注意書き部屋へ転送し、同意後メインエリアに転送する仕組みを簡単構築します。
 
-- **個別待機ルーム管理**: 入室直後にプレイヤーを一時的な待機ルームへ自動転送し、混雑を避けながら準備時間を確保します。
-- **注意事項と同意フロー**: 注意書きやルールを順番に提示し、同意ボタンを押したプレイヤーだけをメインエリアへ送り出します。
-- **コントロールパネル連携**: ワールド内のパネルからエントランス転送の有効／無効や関連設定を運営側が即座に切り替えられます。
-- **柔軟な拡張性**: UdonSharpスクリプトやエリア設定を組み合わせ、イベント規模やルールに合わせたカスタマイズが可能です。
+1. ジョイン後、個別の部屋に転送
+2. 部屋の中で注意事項を同意
+3. メインエリアに転送
 
 ## 動作環境
 
