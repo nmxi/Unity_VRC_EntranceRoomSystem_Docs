@@ -6,14 +6,14 @@ import ClickableImage from '@site/src/components/ClickableImage';
 
 # はじめに
 
-VGC2 を使い始めるための手順を説明します。
+ERSを使い始めるための手順を説明します。
 
-## UnityプロジェクトにVGC2を導入
+## UnityプロジェクトにERSを導入
 
 ### 1. Boothからパッケージをダウンロード
 
 1. [Booth](https://nmxi.booth.pm/)の販売ページにアクセス
-2. VGC2 を購入または試用版をダウンロード
+2. ERS を購入または試用版をダウンロード
 3. ダウンロードしたZIPファイルを解凍
 
 ### 2. UnityPackageのインポート

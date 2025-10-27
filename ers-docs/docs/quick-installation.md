@@ -10,6 +10,8 @@ Entrance Room System（ERS）を短時間で導入するためのガイドです
 
 <ClickableImage src="/img/ers-quick-install-overview.png" alt="ERS クイックインストールの概要" />
 
+<p style={{ textAlign: 'center' }}>クイックインストールで配置するエントランスルームの見た目</p>
+
 ## 導入手順
 
 ### 1. パッケージのインポート
