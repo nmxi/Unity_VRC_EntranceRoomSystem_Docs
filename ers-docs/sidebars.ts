@@ -24,7 +24,6 @@ const sidebars: SidebarsConfig = {
       items: [
         'getting-started',
         'add-prefab',
-        'setup-transforms',
         'add-entrance-room',
         'world-upload',
       ],

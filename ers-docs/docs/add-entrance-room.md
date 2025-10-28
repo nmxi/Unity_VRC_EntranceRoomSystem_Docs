@@ -6,14 +6,19 @@ import ClickableImage from '@site/src/components/ClickableImage';
 
 # エントランスルームの配置
 
-エントランスルームは、1プレイヤーごとに1部屋が割り当てられる個別待機スペースです。イベントの注意書きを表示したり、演出を仕込んだりすることで、入場前の準備や世界観づくりに活用できます。
+エントランスルームは、1プレイヤーにつき1部屋ずつ割り当てられる個別のエリアです。イベントの注意書きを表示したり、演出を仕込んだりすることで、入場前の準備や世界観づくりに活用できます。
 
-## サンプルPrefabからエントランスルームを配置
+エントランスルームをシーンに追加する手順は2通りあります。
+1. サンプルのエントランスルームを使用する
+2. カスタムのエントランスルームを使用する（<span style={{ color: '#d9534f' }}>自由にカスタムできるが難易度高め</span>）
+
+まず最小限にギミックを動作させる場合は、サンプルのエントランスルームを使用することを推奨します。
+
+## 1.サンプルのエントランスルームを使用する場合
 
 `Assets/mikinel/EntranceRoomSystem/Prefabs` ディレクトリには、予め用意されたエントランスルームの完成形サンプルが4種類含まれています。サンプルのエントランスルームの Prefab をシーンに配置することで、細かな設定をすることなく、EntranceRoomSystem を動作させることができるようになります。
 
-<ClickableImage src="/img/ers-entrance-room-sample-prefabs.png" alt="ERSEntranceRoom サンプルPrefab一覧" />
-<p style={{ textAlign: 'center' }}>サンプルのエントランスルームPrefab（4種）</p>
+### 4種のセットアップ済みエントランスルームPrefab
 
 <div className="row sample-room-gallery">
   <div className="col col--3 sample-room-gallery__item">
@@ -34,6 +39,18 @@ import ClickableImage from '@site/src/components/ClickableImage';
   </div>
 </div>
 
-## エントランスルームをカスタムする場合
+<ClickableImage src="/img/ers-entrance-room-sample-prefabs.png" alt="ERSEntranceRoom サンプルPrefab一覧" />
+<p style={{ textAlign: 'center' }}>Assets/mikinel/EntranceRoomSystem/Prefabsディレクトリ</p>
+### エントランスルームPrefabの追加
+<ClickableImage src="/img/sample-entrance-room-add.png" alt="Sample1のPrefabをシーンに追加する方法" />
+<p style={{ textAlign: 'center' }}>サンプルで用意されたエントランスルームのPrefabをシーン上に配置する様子</p>
 
-サンプルPrefabをベースに独自のエントランスルームを作成したい場合は、Prefabを複製してメッシュやマテリアル、UIテキスト、アニメーションなどを調整してください。詳細手順やカスタマイズ時の注意点は「[エントランスルームのカスタム](custom-entrance-room.md)」で解説しています。
+### 注意書きの文面の編集
+
+シーンに配置したサンプルのエントランスルームは、子要素に含まれる Text コンポーネント内の文字列を編集することで、文章をカスタムすることができます。
+
+<ClickableImage src="/img/custom-sample-entrance-room-text.png" alt="サンプルエントランスルームのテキスト編集例" />
+
+## 2.カスタムのエントランスルームを使用する場合
+
+独自のエントランスルームを作成したい場合は、応用機能導入手順内の[エントランスルームのカスタム](custom-entrance-room.md)のページをご覧ください。
