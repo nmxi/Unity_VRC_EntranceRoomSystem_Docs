@@ -4,29 +4,20 @@ sidebar_position: 2
 
 import ClickableImage from '@site/src/components/ClickableImage';
 
-# Prefabの追加
+# Prefabの配置
 
-VoiceGroupControl2をプロジェクトに導入する最初のステップは、Prefabの追加です。
+Entrance Room System（ERS）をプロジェクトに導入する最初のステップは、`EntranceRoomSystem.prefab` をシーンに配置することです。この Prefab には ERS を動作させるための根幹の機能が含まれており、必ずシーンに1つ配置する必要があります。
 
-## Prefabの場所
+## EntranceRoomSystem.prefabの配置
 
-VGC2のメインPrefabは以下の場所にあります：
+`EntranceRoomSystem.prefab` は以下の場所にあります：
 
 ```
-Assets/mikinel/VoiceGroupControl2/VoiceGroupControl2.prefab
+Assets/mikinel/EntranceRoomSystem/EntranceRoomSystem.prefab
 ```
 
-<ClickableImage src="/img/add-prefab--project-folder-view.png" alt="VoiceGroupControl2フォルダ内のPrefabの場所" />
-
-## Prefabをシーンに追加
-
-`VoiceGroupControl2.prefab`をシーンに配置します。
-
-配置したPrefabにはVGCManagerコンポーネントがあります。
-
-<ClickableImage src="/img/add-prefab--scene-placement.png" alt="PrefabをHierarchyにドラッグ&ドロップ" />
+<ClickableImage src="/img/ers-prefab-in-scene.png" alt="EntranceRoomSystemフォルダ内のPrefabの場所" />
 
 :::caution 注意
-- VoiceGroupControl2.prefabはシーンに1つだけ配置してください。2つ以上配置すると正常に動作しません。
-- Prefab内のオブジェクトを削除したり、構造を変更したりしないでください。正常に動作しなくなる可能性があります。
+シーン内に複数の `EntranceRoomSystem.prefab` は配置しないでください。
 :::

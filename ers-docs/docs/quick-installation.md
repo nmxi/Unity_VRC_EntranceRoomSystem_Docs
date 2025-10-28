@@ -20,9 +20,9 @@ Entrance Room System（ERS）を短時間で導入するためのガイドです
 2. Unity プロジェクトで **Assets > Import Package > Custom Package** を選択します。
 3. ダウンロードした unitypackage を指定してインポートします。
 
-### 2. EntranceRoomSystem Prefab の配置
+### 2. EntranceRoomSystem.prefab の配置
 
-`Assets/mikinel/EntranceRoomSystem/Prefabs` フォルダに含まれる `EntranceRoomSystem.prefab` をシーンに配置します。
+`Assets/mikinel/EntranceRoomSystem/EntranceRoomSystem.prefab` をシーンに配置します。
 
 <ClickableImage src="/img/ers-prefab-in-scene.png" alt="EntranceRoomSystem Prefab 配置例" />
 
@@ -49,7 +49,7 @@ Entrance Room System（ERS）を短時間で導入するためのガイドです
 
 ### 5. ERSEntranceRoom オブジェクトの配置
 
-シーン上にエントランスルームを配置します。このクイックインストールでは、同梱されている `ERSEntranceRoom_Sample1.prefab`（灰色のキューブ型の部屋とサンプル注意書き）をシーンに追加し、手順3で移動したオブジェクトと同様にメインエリアから見えない位置へ配置します。
+シーン上にエントランスルームを配置します。このクイックインストールでは、同梱されている `ERSEntranceRoom_Sample1.prefab`（必要最低限の灰色の部屋）をシーンに追加し、手順3で移動したオブジェクトと同様にメインエリアから見えない位置へ配置します。
 
 <ClickableImage src="/img/ers-entrance-room-sample.png" alt="ERSEntranceRoom 配置例" />
 

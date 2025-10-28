@@ -24,6 +24,8 @@ const sidebars: SidebarsConfig = {
       items: [
         'getting-started',
         'add-prefab',
+        'setup-transforms',
+        'add-entrance-room',
         'world-upload',
       ],
     },
@@ -32,6 +34,7 @@ const sidebars: SidebarsConfig = {
       label: '🟠 応用機能導入手順',
       collapsed: false,
       items: [
+        'custom-entrance-room',
         'control-panel',
       ],
     },
