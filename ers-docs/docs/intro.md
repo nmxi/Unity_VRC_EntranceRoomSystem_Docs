@@ -32,3 +32,9 @@ ERSは以下の環境で動作確認を行っています：
 
 - 詳細な手順をご覧になる方は[はじめに](/docs/getting-started)をご覧ください
 - すぐに導入したい方は[クイックインストール](/docs/quick-installation)へ
+
+## ライセンス表記
+
+ERSには以下のアセットが含まれています。
+
+- あっぷるてぃー ([\@Appletea_VRC](https://x.com/Appletea_VRC)) : Screen Gif - 視界ジャックでGifファイルを流すShader (https://booth.pm/ja/items/5984990) - MITライセンス
