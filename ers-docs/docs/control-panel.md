@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 7
 sidebar_label: コントロールパネルの追加
 ---
 
@@ -13,15 +13,13 @@ ERSのコントロールパネルを使用すると、ワールド内でERSに�
 
 ## コントロールパネルの配置
 
-1. `Assets/mikinel/EntranceRoomSystem/Prefabs` フォルダを開きます
+<ClickableImage src="/img/add-ers-control-panel.png" alt="コントロールパネルの配置" />
 
-<ClickableImage src="/img/transceiver-setup--prefab-location.png" alt="コントロールパネルプレハブの場所" />
-
-2. `ERSControlPanel.prefab` を見つけます
-3. シーン上に配置します
+1. `Assets/mikinel/EntranceRoomSystem/Prefabs/Additional/ERSControlPanel.prefab` をシーン上に配置
+2. 位置の調整
 
 ## コントロールパネルの操作
 
 ### エントランスシステム有効
-インスタンスに入室したときにエントランスへの転送の有効、無効を切り替えます。
+インスタンスに入室したときにエントランスへの転送の有効、無効を切り替えます。<br />無効化した場合、ジョイン後に直接メインエリアにスポーンするようになります。
 

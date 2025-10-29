@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2.5
+sidebar_position: 5
 ---
 
 import ClickableImage from '@site/src/components/ClickableImage';
