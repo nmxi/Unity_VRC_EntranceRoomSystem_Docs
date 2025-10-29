@@ -34,6 +34,7 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         'custom-entrance-room',
+        'entrance-room-effects',
         'lightbake-entrance-room',
         'control-panel',
         'randomize-spawn-position',
