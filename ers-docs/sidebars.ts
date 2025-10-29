@@ -19,7 +19,7 @@ const sidebars: SidebarsConfig = {
     'quick-installation',
     {
       type: 'category',
-      label: '🟢 基本機能導入手順',
+      label: '🟢 基本導入手順',
       collapsed: false,
       items: [
         'getting-started',
@@ -30,7 +30,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: '🟠 応用機能導入手順',
+      label: '🟠 応用項目',
       collapsed: false,
       items: [
         'custom-entrance-room',

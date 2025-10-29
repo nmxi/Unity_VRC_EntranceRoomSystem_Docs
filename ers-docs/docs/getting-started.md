@@ -6,7 +6,16 @@ import ClickableImage from '@site/src/components/ClickableImage';
 
 # はじめに
 
-ERSを使い始めるための手順を説明します。
+## ERSの動作フローと必要なオブジェクト
+
+<ClickableImage src="/img/ers-behavior.png" alt="ERSの動作と必要なオブジェクト" />
+<p style={{ textAlign: 'center' }}>ERSの基本的な動作フロー</p>
+
+1. FirstSpawnRoom(暗闇の部屋)にスポーンしUdonの同期が完了するまで待機する(`ERSFirstSpawnRoomオブジェクト`)
+2. Udonの同期完了後、個別の部屋(`エントランスルーム`)にテレポートする
+3. オブジェクトインタラクトなどのイベント発火後メインのエリアにテレポートする(`ERSSpawnPointData_MainAreaオブジェクト`)
+
+これらの必要なオブジェクトのセットアップを行っていきます。
 
 ## UnityプロジェクトにERSを導入
 

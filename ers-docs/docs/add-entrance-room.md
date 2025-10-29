@@ -45,6 +45,13 @@ import ClickableImage from '@site/src/components/ClickableImage';
 <ClickableImage src="/img/sample-entrance-room-add.png" alt="Sample1のPrefabをシーンに追加する方法" />
 <p style={{ textAlign: 'center' }}>サンプルで用意されたエントランスルームのPrefabをシーン上に配置する様子</p>
 
+:::caution 注意
+手順3で移動した `ERSFirstSpawnRoom` と<span style={{ color: 'red' }}>重ならない位置</span>に配置してください。重なると待機ルームとメインエリアが同じ場所に生成され、正しく機能しません。
+:::
+
+<ClickableImage src="/img/first-room-entrance-room-overlap.png" alt="ERSFirstSpawnRoom と ERSEntranceRoom が重なっている例（NG）" />
+<p style={{ textAlign: 'center' }}>2つのオブジェクトが重なってしまっているダメな例</p>
+
 ### 注意書きの文面の編集
 
 シーンに配置したサンプルのエントランスルームは、子要素に含まれる Text コンポーネント内の文字列を編集することで、文章をカスタムすることができます。
@@ -53,4 +60,4 @@ import ClickableImage from '@site/src/components/ClickableImage';
 
 ## 2.カスタムのエントランスルームを使用する場合
 
-独自のエントランスルームを作成したい場合は、応用機能導入手順内の[エントランスルームのカスタム](custom-entrance-room.md)のページをご覧ください。
+独自のエントランスルームを作成したい場合は、応用項目内の[エントランスルームのカスタム](custom-entrance-room.md)のページをご覧ください。

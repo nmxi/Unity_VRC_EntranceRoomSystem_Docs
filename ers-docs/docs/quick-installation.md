@@ -54,8 +54,16 @@ Entrance Room System（ERS）を短時間で導入するためのガイドです
 <ClickableImage src="/img/ers-entrance-room-sample.png" alt="ERSEntranceRoom 配置例" />
 
 :::caution 注意
+手順3で移動した `ERSFirstSpawnRoom` と<span style={{ color: 'red' }}>重ならない位置</span>に配置してください。重なると待機ルームとメインエリアが同じ場所に生成され、正しく機能しません。
+:::
+
+<ClickableImage src="/img/first-room-entrance-room-overlap.png" alt="ERSFirstSpawnRoom と ERSEntranceRoom が重なっている例（NG）" />
+<p style={{ textAlign: 'center' }}>2つのオブジェクトが重なってしまっているダメな例</p>
+
+:::caution 注意
 ・`VRC Scene Descriptor` に設定されている `Respawn Height Y`（強制的にリスポーンされる Y 座標）以下に配置しないでください  
 ・原点から極端に離れた場所（例: `X=10,000`）への配置は避けることを推奨します。メインエリアの地中やカメラに映らない程度に離れた場所への配置がおすすめです（精度の限界による描画の乱れが発生します）
 :::
 
 ### 6. ワールドのアップロードと動作確認
+VRChatランタイム上で動作を確認できたら、導入完了です。
