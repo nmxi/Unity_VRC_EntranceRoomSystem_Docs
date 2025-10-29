@@ -35,7 +35,7 @@ import ClickableImage from '@site/src/components/ClickableImage';
   </div>
   <div className="col col--3 sample-room-gallery__item">
     <ClickableImage src="/img/ers-room-sample-4.png" alt="ERSEntranceRoom Sample4" />
-    <p className="sample-room-gallery__caption"><strong>Sample4 prefab</strong><br />扉から進む演出の<br />ライティングが施された部屋<br />（ライトベイクが必要です）</p>
+    <p className="sample-room-gallery__caption"><strong>Sample4 prefab</strong><br />扉から進む演出の<br />ライティングが施された部屋<br />（<span style={{ color: 'red' }}>ライトベイクが必要です</span>）</p>
   </div>
 </div>
 
