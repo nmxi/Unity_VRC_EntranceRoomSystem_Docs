@@ -34,6 +34,7 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         'custom-entrance-room',
+        'hide-udon-syncing',
         'control-panel',
       ],
     },
