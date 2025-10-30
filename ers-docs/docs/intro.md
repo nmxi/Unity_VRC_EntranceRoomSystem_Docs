@@ -9,7 +9,7 @@ import ClickableImage from '@site/src/components/ClickableImage';
 
 Entrance Room System（ERS）は、VRChatワールドで使用できるUdon製エントランスルームギミックです。
 
-ERSを導入することで、ワールドの入室時に注意書きの提示や、世界観の導入に必要な演出の構築を容易に導入できるようになります。
+ERSを導入することで、ワールドの入室時に注意書きの提示や、世界観の導入に必要な演出を容易に構築できるようになります。
 
 <ClickableImage src="/img/ers-preview.png" alt="ERS Preview" />
 
