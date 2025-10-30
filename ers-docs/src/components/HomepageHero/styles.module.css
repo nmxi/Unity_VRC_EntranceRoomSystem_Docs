@@ -4,7 +4,7 @@
   position: relative;
   overflow: hidden;
   background-image: 
-    linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.45) 100%),
+    linear-gradient(135deg, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.65) 100%),
     url('/img/ers-preview.png');
   background-size: cover;
   background-position: center;
