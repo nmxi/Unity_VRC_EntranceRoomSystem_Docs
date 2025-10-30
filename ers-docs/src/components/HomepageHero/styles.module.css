@@ -5,7 +5,7 @@
   overflow: hidden;
   background-image: 
     linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.45) 100%),
-    url('/img/ers-hero-image.png');
+    url('/img/ers-preview.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

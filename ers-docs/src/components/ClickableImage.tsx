@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
+import clsx from 'clsx';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './ClickableImage.module.css';
 
 interface ClickableImageProps {
   src: string;
   alt: string;
+  imageClassName?: string;
 }
 
-export default function ClickableImage({ src, alt }: ClickableImageProps) {
+export default function ClickableImage({ src, alt, imageClassName }: ClickableImageProps) {
   const [isOpen, setIsOpen] = useState(false);
   const imageSrc = useBaseUrl(src);
 
@@ -28,7 +30,7 @@ export default function ClickableImage({ src, alt }: ClickableImageProps) {
       <img
         src={imageSrc}
         alt={alt}
-        className={styles.clickableImage}
+        className={clsx(styles.clickableImage, imageClassName)}
         onClick={handleClick}
       />
       {isOpen && (

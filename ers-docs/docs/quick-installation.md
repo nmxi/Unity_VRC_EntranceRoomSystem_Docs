@@ -30,7 +30,7 @@ Entrance Room System（ERS）を短時間で導入するためのガイドです
 シーン内に複数の `EntranceRoomSystem.prefab` は配置しないでください。
 :::
 
-### 3. ERSFirstSpawnRoom オブジェクトの位置を修正
+### 3. ERSFirstSpawnRoom オブジェクトの位置調整
 
 2で配置した `EntranceRoomSystem` オブジェクトの子階層にある `ERSFirstSpawnRoom` をワールドのメインエリアから見えない位置に移動します。
 
@@ -41,7 +41,7 @@ Entrance Room System（ERS）を短時間で導入するためのガイドです
 ・原点から極端に離れた場所（例: `X=10,000`）への配置は避けることを推奨します。メインエリアの地中やカメラに映らない程度に離れた場所への配置がおすすめです（精度の限界による描画の乱れが発生します）
 :::
 
-### 4. ERSSpawnPointData_MainArea オブジェクトの位置を修正
+### 4. ERSSpawnPointData_MainArea オブジェクトの位置調整
 
 2で配置した `EntranceRoomSystem` オブジェクトの子階層にある `ERSSpawnPointData_MainArea` をワールドのメインエリアのスポーン地点（エントランスルームからの転送先）に配置します。
 

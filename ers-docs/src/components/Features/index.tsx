@@ -1,6 +1,6 @@
 import React from 'react';
-import useBaseUrl from '@docusaurus/useBaseUrl';
 import styles from './styles.module.css';
+import ClickableImage from '@site/src/components/ClickableImage';
 
 type FlowStep = {
   alt: string;
@@ -34,18 +34,18 @@ export default function Features(): JSX.Element {
         </div>
         <div className={styles.flowCard}>
           <ol className={styles.flowList}>
-            {flowSteps.map((step, index) => {
-              const imageUrl = useBaseUrl(`img/${step.src}`);
-
-              return (
-                <li key={step.alt} className={styles.flowItem}>
-                  <span className={styles.stepNumber}>{index + 1}</span>
-                  <div className={styles.stepImage}>
-                    <img src={imageUrl} alt={step.alt} />
-                  </div>
-                </li>
-              );
-            })}
+            {flowSteps.map((step, index) => (
+              <li key={step.alt} className={styles.flowItem}>
+                <span className={styles.stepNumber}>{index + 1}</span>
+                <div className={styles.stepImage}>
+                  <ClickableImage
+                    src={`/img/${step.src}`}
+                    alt={step.alt}
+                    imageClassName={styles.flowImage}
+                  />
+                </div>
+              </li>
+            ))}
           </ol>
         </div>
       </div>
