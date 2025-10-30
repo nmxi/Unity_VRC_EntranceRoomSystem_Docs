@@ -101,7 +101,7 @@ const config: Config = {
           items: [
             {
               label: 'Booth',
-              href: 'https://nmxi.booth.pm/',
+              href: 'https://nmxi.booth.pm/items/7598569',
             },
           ],
         },
