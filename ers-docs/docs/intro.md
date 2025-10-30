@@ -10,6 +10,7 @@ import ClickableImage from '@site/src/components/ClickableImage';
 Entrance Room System（ERS）は、VRChatワールドで使用できるエントランスルームシステムです。
 
 <ClickableImage src="/img/ers-preview.png" alt="ERS Preview" />
+<ClickableImage src="/img/entrance-room-sample.png" alt="ERS Entrance Room Sample" />
 
 ## 主要機能
 
