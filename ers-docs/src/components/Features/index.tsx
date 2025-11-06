@@ -29,7 +29,7 @@ export default function Features(): JSX.Element {
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>主要機能</h2>
           <p className={styles.sectionSubtitle}>
-            ワールド入室後、個別の注意書き部屋へ転送し、同意後メインエリアに転送する仕組みを簡単構築します。
+            ワールド入室後、個別のエントランス部屋へ転送し、同意後メインエリアに転送する仕組みを簡単構築します。
           </p>
         </div>
         <div className={styles.flowCard}>
